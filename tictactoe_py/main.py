@@ -49,6 +49,9 @@ class Tictactoe:
     def play(self):
         if self.player_turn == self.human_turn:     # Calls Human.move if player's turn
             move = Human.move(self.check_available_moves(self.board))
+
+            # Uncomment for AI vs AI mode
+            # move = SmartPlayer.move(self.board, self.check_available_moves(self.board), self.human_symbol,self.player_turn)
         else:                                       # Calls for an opponent
             # Uncomment for p2p mode
             # move = Human.move(self.check_available_moves(self.board))
